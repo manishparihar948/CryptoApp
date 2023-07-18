@@ -22,6 +22,8 @@ class DeveloperPreview {
     static let instance = DeveloperPreview()
     private init() { } // If we have private we can sure that we can only initialize inside the class.
     
+    let homeVM = HomeViewModel()
+    
     let coin = CoinModel(id: "bitcoin",
                          symbol: "btc",
                          name: "Bitcoin",
