@@ -72,7 +72,7 @@ extension HomeView {
                     }
                 }
         }
-        .padding(.horizontal)
+        .padding(.horizontal) 
     }
     
     private var allCoinsView : some View {
