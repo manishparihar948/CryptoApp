@@ -9,6 +9,14 @@ import Foundation
 import Combine
 
 class HomeViewModel: ObservableObject {
+    
+    @Published var statistics: [StatisticModel] = [
+        StatisticModel(title: "Title", value: "Value", percentageChange: 1),
+        StatisticModel(title: "Title", value: "Value"),
+        StatisticModel(title: "Title", value: "Value"),
+        StatisticModel(title: "Title", value: "Value", percentageChange: -7),
+    ]
+    
     @Published var allCoins : [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     
@@ -19,12 +27,6 @@ class HomeViewModel: ObservableObject {
     
     init() {
         addSubscribers()
-        /*
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.allCoins.append(DeveloperPreview.instance.coin)
-            self.portfolioCoins.append(DeveloperPreview.instance.coin)
-        }
-        */
     }
     
     func addSubscribers() {
